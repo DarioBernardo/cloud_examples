@@ -1,0 +1,1 @@
+gcloud functions deploy dataflow-launcher --gen2 --runtime=python39 --region=europe-west3 --entry-point=handle_pubsub_message --trigger-topic=landing_topic --set-env-vars=PROJECT_ID=datasphere-313410,REGION=europe-west3,TEMPLATE_LOCATION=gs://alex_migrator_test/pipeline_templates/example/my_pipeline,OUTPUT_LOCATION=gs://alex_migrator_test/themis-test/output

@@ -1,0 +1,2 @@
+# pip install -r requirements.txt
+python pipeline.py --runner DataflowRunner --project datasphere-313410 --staging_location gs://alex_migrator_test/pipelines/example/staging --temp_location gs://alex_migrator_test/pipelines/example/temp --template_location gs://alex_migrator_test/pipeline_templates/example/my_pipeline --region europe-west3 --setup_file ./setup.py
