@@ -34,7 +34,7 @@ def _try_handle_pubsub_message(event, context):
 
     job_name = f"ingestion_{event['attributes']['bucketId']}_{event['attributes']['objectGeneration']}_{datetime.datetime.now().strftime('%Y%m%d-%H%M%S')}"
 
-    out_location = OUTPUT_LOCATION if OUTPUT_LOCATION[-1] != "/" else OUTPUT_LOCATION+"/"
+    out_location = OUTPUT_LOCATION if OUTPUT_LOCATION[-1] == "/" else OUTPUT_LOCATION+"/"
 
     job_parameters = {
         'pipeline_name': job_name,
